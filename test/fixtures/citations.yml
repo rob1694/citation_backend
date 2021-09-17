@@ -1,0 +1,19 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  offender: one
+  enforcer: one
+  violation: MyString
+  amount: 1
+  due_date: 
+  summons: false
+  summons_date: 
+
+two:
+  offender: two
+  enforcer: two
+  violation: MyString
+  amount: 1
+  due_date: 
+  summons: false
+  summons_date: 
