@@ -13,4 +13,4 @@ e2 = Enforcer.create([{ name: 'Mike Mulanny', badge_number: '234567', }])
 o1 = Offender.create([{ name: 'Missy Mercado' }])
 o2 = Offender.create([{ name: 'Landon Davies' }])
 
-c1 = Citation.create([{ enforcer_id: 1, offender_id: 1, violation: 'double parked', amount: 35, due_date: "10/30/2021", summons: false, summons_date: "" }])
+c1 = Citation.create([{ enforcer_id: 1, offender_id: 1, violation: 'double parked', amount: 35, due_date: "10/30/2021", summons_date: "" }])

@@ -21,7 +21,6 @@ ActiveRecord::Schema.define(version: 2021_09_17_175718) do
     t.string "violation"
     t.integer "amount"
     t.string "due_date"
-    t.boolean "summons"
     t.string "summons_date"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false

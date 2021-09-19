@@ -6,7 +6,6 @@ class CreateCitations < ActiveRecord::Migration[6.1]
       t.string :violation
       t.integer :amount
       t.string :due_date
-      t.boolean :summons
       t.string :summons_date
 
       t.timestamps
