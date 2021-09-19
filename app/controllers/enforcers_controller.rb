@@ -17,15 +17,17 @@ class EnforcersController < ApplicationController
     end
       
     def update
-      enforcer = find_enforcer
+      id = params[:id]
+      enforcer = Enforcer.find(id)
       enforcer.update(enforcer_params)
       render json: enforcer
     end
   
     def destroy
-      enforcer = find_enforcer
+      id = params[:id]
+      enforcer = Enforcer.find(id)
       enforcer.destroy
-      head :no_content
+      render json: enforcer
     end
 
     private

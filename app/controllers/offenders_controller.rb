@@ -17,15 +17,17 @@ class OffendersController < ApplicationController
     end
       
     def update
-      offender = find_offender
+      id = params[:id]
+      offender = Offender.find(id)
       offender.update(offender_params)
       render json: offender
     end
   
     def destroy
-      offender = find_offender
+      id = params[:id]
+      offender = Offender.find(id)
       offender.destroy
-      head :no_content
+      render json: offender
     end
 
     private

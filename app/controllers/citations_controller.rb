@@ -16,15 +16,17 @@ class CitationsController < ApplicationController
     end
       
     def update
-      citation = find_citation
+      id = params[:id]
+      citation = Citation.find(id)
       citation.update(citation_params)
       render json: citation
     end
   
     def destroy
-      citation = find_citation
+      id = params[:id]
+      citation = Citation.find(id)
       citation.destroy
-      head :no_content
+      render json: citation
     end
 
     private
@@ -32,4 +34,5 @@ class CitationsController < ApplicationController
     def citation_params
       params.permit(:violations, :amount, :due_date, :due_date, :summons, :summons_date)
   end
+
 end
