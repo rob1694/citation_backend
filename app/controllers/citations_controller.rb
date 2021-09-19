@@ -32,7 +32,7 @@ class CitationsController < ApplicationController
     private
 
     def citation_params
-      params.permit(:violations, :amount, :due_date, :due_date, :summons, :summons_date)
+      params.permit(:violations, :amount, :due_date, :due_date, :summons_date)
   end
 
 end
