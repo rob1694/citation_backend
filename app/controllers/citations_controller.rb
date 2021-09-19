@@ -26,4 +26,10 @@ class CitationsController < ApplicationController
       citation.destroy
       head :no_content
     end
+
+    private
+
+    def citation_params
+      params.permit(:violations, :amount, :due_date, :due_date, :summons, :summons_date)
+  end
 end

@@ -7,13 +7,13 @@ class EnforcersController < ApplicationController
 
       def show
         id = params[:id]
-        @enforcer = Enforcer.find(id)
-        render json: @enforcer, include: :enforcers
+        enforcer = Enforcer.find(id)
+        render json: enforcer, include: :enforcers
     end
 
     def create
-      enforcer = Enforcer.create!(enforcer_params)
-      render json: enforcer
+      @enforcer = Enforcer.create(enforcer_params)
+      render json: @enforcer
     end
       
     def update
@@ -26,5 +26,12 @@ class EnforcersController < ApplicationController
       enforcer = find_enforcer
       enforcer.destroy
       head :no_content
+    end
+
+    private
+
+    
+    def enforcer_params
+        params.permit(:name, :badge_number)
     end
 end

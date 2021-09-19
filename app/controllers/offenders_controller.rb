@@ -27,4 +27,11 @@ class OffendersController < ApplicationController
       offender.destroy
       head :no_content
     end
+
+    private
+
+    def offender_params
+      params.permit(:name)
+  end
+
 end
