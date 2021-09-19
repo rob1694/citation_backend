@@ -6,12 +6,12 @@ class CitationsController < ApplicationController
 
       def show
         id = params[:id]
-        @citation = Citation.find(id)
-        render json: @citation
+        citation = Citation.find(id)
+        render json:citation
     end
 
     def create
-      citation = Citation.create!(citation_params)
+      citation = Citation.create(citation_params)
       render json: citation
     end
       
