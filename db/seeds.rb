@@ -14,3 +14,4 @@ o1 = Offender.create([{ name: 'Missy Mercado' }])
 o2 = Offender.create([{ name: 'Landon Davies' }])
 
 c1 = Citation.create([{ enforcer_id: 1, offender_id: 1, violation: 'double parked', amount: 35, due_date: "10/30/2021", summons_date: "" }])
+c2 = Citation.create([{enforcer_id:2, offender_id:1, violation: 'jay walking', amount: 15, due_date: "11/21/2021", summons_date: ""}])
