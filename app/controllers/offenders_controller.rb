@@ -12,7 +12,7 @@ class OffendersController < ApplicationController
     end
 
     def create
-      offender = Offender.create!(offender_params)
+      offender = Offender.create(offender_params)
       render json: offender
     end
       
